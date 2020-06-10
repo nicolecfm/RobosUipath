@@ -1,0 +1,114 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SiteOpen" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="701,1111" sap2010:WorkflowViewState.IdRef="SiteOpen_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SiteOpen" sap:VirtualizedContainerService.HintSize="644,946" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Login_Amil" sap:VirtualizedContainerService.HintSize="602,854" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="https://www.amil.com.br/empresa/#/login" Name="site" />
+        <Variable x:TypeArguments="x:String" Default="992165A07" Name="user" />
+        <Variable x:TypeArguments="x:String" Default="Hexa#2022" Name="pwd" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="560,762" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[site]">
+        <ui:OpenBrowser.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="526,661" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="element" />
+                <Variable x:TypeArguments="ui:UiElement" Name="existe" />
+                <Variable x:TypeArguments="x:Boolean" Name="encontrouAcesso" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Site\Login.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <ui:ImageFound DisplayName="Image Exists 'chrome.exe Portal'" Found="[encontrouAcesso]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                <ui:ImageFound.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                </ui:ImageFound.Image>
+                <ui:ImageFound.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f6871e3a-03be-433b-bb30-5dffa4df1490" WaitForReady="COMPLETE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:ImageFound.Target>
+              </ui:ImageFound>
+              <If Condition="[encontrouAcesso=true]" sap:VirtualizedContainerService.HintSize="484,234" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Else>
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Login" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Site\Login.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:OpenBrowser.Body>
+      </ui:OpenBrowser>
+    </Sequence>
+  </Sequence>
+</Activity>

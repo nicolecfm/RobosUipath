@@ -1,0 +1,272 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GestaoFinanceira" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="837,2390" sap2010:WorkflowViewState.IdRef="GestaoFinanceira_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GestaoFinanceira" sap:VirtualizedContainerService.HintSize="468,2185" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:UiElement" Name="retorno" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ret" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="426,736" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:AnchorBase AnchorPosition="Top" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+        <ui:AnchorBase.Action>
+          <ActivityAction x:TypeArguments="ui:Anchor">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+            </ActivityAction.Argument>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition OffsetX="152" OffsetY="20" Position="TopLeft" />
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="128fb986-9362-471b-bfc4-678fccc0ea2e" InformativeScreenshot="e2ff7440c47e1e8e911bea8db6065014" Selector="&lt;webctrl tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </ActivityAction>
+        </ui:AnchorBase.Action>
+        <ui:AnchorBase.AnchorProvider>
+          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Anchor Find Element 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+            <ui:WaitUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bf7b915d-0a88-46ec-b5f7-80eefa8f2702" InformativeScreenshot="e2ff7440c47e1e8e911bea8db6065014" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;ul&amp;gt;div&amp;gt;div' idx='3' parentid='app' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </ui:WaitUiElementAppear.Target>
+          </ui:WaitUiElementAppear>
+        </ui:AnchorBase.AnchorProvider>
+      </ui:AnchorBase>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition OffsetX="132" OffsetY="23" Position="TopLeft" />
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e88fdc12-c2f4-4f4b-a8d5-1c1287b68ca2" InformativeScreenshot="1f3b81699e1dc1210b4966e70c9db70b" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;&lt;webctrl aaname='Movimentação Cadastral' parentid='app' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  #/demonstrativo-anal...'" sap:VirtualizedContainerService.HintSize="384,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition OffsetX="177" OffsetY="21" Position="TopLeft" />
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="76da1b9c-01ab-4690-aebb-9d0171d9b8d1" InformativeScreenshot="e54ae864aab7eba8e44f9a006f791ccb" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;&lt;webctrl aaname='Demonstrativo Analítico do Faturamento' tag='A' /&gt;" WaitForReady="COMPLETE">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+    </Sequence>
+    <ui:FindChildren Children="[ret]" DisplayName="Find Children 'DIV'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="426,106" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_CHILDREN">
+      <ui:FindChildren.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="afc0e09b-fb71-4009-8f0f-993d7640b902" InformativeScreenshot="3f820902726987c9468487573a4ed279" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;&lt;webctrl isleaf='1' parentid='rw_21_input' tag='DIV' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:FindChildren.Target>
+    </ui:FindChildren>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="426,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[ret]" />
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="426,634" sap2010:WorkflowViewState.IdRef="ForEach`1_4">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,500" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2a7af3b8-292c-4b3b-902b-a2396b47290a">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DelayMS="1500" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="353de76c-a4fb-4794-8907-3b68c67fe23d" InformativeScreenshot="17ec9ede593bf7fae569dbcddb7a6ea6" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;&lt;webctrl idx='1' isleaf='1' parentid='rw_21_input' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'SELECT  empresa'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="down" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="824b0770-fbc8-4432-92b3-6ba763d8d455" InformativeScreenshot="aa5edf4760b7460c275db88bb76b505e" Selector="&lt;html app='chrome.exe' title='VIDAWEB' /&gt;&lt;webctrl id='empresa' tag='SELECT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="426,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="28396c37-8c25-4fc3-a266-1143f3ddc75c" InformativeScreenshot="548c8f49d9ce04b2ac848e88f9ed6838" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;&lt;webctrl aaname='Código' parentid='app' tag='BUTTON' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="426,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="55e2adc1-62fb-4fb6-bd54-c0df4bf6202d" InformativeScreenshot="35cd311eb6221f81db46fae9f96b0ce1" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;&lt;webctrl aaname='PDF' parentid='app' tag='BUTTON' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="426,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e69ae031-a470-4e12-8657-b1c3b98e08ae" InformativeScreenshot="25b7c79354108b5eae540e967f59db27" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;&lt;webctrl aaname='29837241' tag='A' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+  </Sequence>
+</Activity>

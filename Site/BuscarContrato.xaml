@@ -1,0 +1,205 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="701,2059" sap2010:WorkflowViewState.IdRef="Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="22">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.CV</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="616,1854" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Dataatual" />
+      <Variable x:TypeArguments="x:String" Name="NomeArquivo" />
+      <Variable x:TypeArguments="x:String" Name="resultado" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ret" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AcessarGestaoFinanceira workflow" sap:VirtualizedContainerService.HintSize="574,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Site\AcessarGestaoFinanceira.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="574,1635" sap2010:WorkflowViewState.IdRef="Sequence_34">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Object" Name="contador" />
+        <Variable x:TypeArguments="x:String" Name="result" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="532,1543" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[Enumerable.Range(0,18).ToArray()]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="i" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="496,1409" sap2010:WorkflowViewState.IdRef="Sequence_31">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'chrome.exe Portal'" sap:VirtualizedContainerService.HintSize="454,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:ClickImage.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:ClickImage.CursorPosition>
+                <ui:ClickImage.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAeCAYAAACmPacqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVFhHzZA9CsJAFAZtvZGVF/Aath5NPIKoteAlLC1iIfiDTz7Jagjjuj/Fy4MhZDa7GXY0Wpp5M16ZbY8XG0SMmO0ew4nR7Qwm5g1KL1B6gdILlF6g9AKlFyh7TNZm0w2vpaL9OofWPqDsoANOV7PzvTxI+7Rf50SDULaEkDAlQSEkTDQIZYeaoKwQgbJHSVB2iEAJ5AQVhQiUP0gJKg4RKCPEgqpCBMo/UNDiUBkiUCbQD3q2T01RiECZiH7YdG5D09wKQwTKDOb7763oqXf6LgmUmYSgqhCBsoDqEIHSC5ReoPQCpRcovUDpgtkLJYVjLJQbJPAAAAAASUVORK5CYII=" />
+                </ui:ClickImage.Image>
+                <ui:ClickImage.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0cb6b0e9-27e2-487f-89c3-fe941170bd55" Selector="&lt;html app='chrome.exe' title='Portal Empresas' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:ClickImage.Target>
+              </ui:ClickImage>
+              <Sequence DisplayName="Básico" sap:VirtualizedContainerService.HintSize="454,1171" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="qtd" />
+                  <Variable x:TypeArguments="x:Int32" Name="numero" />
+                  <Variable x:TypeArguments="ui:UiElement" Name="existeFatura" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="412,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Object">[contador]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Object">[i]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign sap:VirtualizedContainerService.HintSize="412,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[numero]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(contador)]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,313" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[Enumerable.Range(0,numero).ToArray()]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="i" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke CliqueDown workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Site\CliqueDown.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="412,116" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="enter" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="360ab451-60aa-4d51-a0eb-c5b950fa0b7c">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="412,116" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="tab" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="360ab451-60aa-4d51-a0eb-c5b950fa0b7c">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BuscarRangeDatas workflow" sap:VirtualizedContainerService.HintSize="412,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Site\BuscarRangeDatas.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="412,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Site/VoltarGestaoFinanceira.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+      </ui:ForEach>
+    </Sequence>
+  </Sequence>
+</Activity>
